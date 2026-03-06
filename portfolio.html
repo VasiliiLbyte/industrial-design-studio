@@ -1,118 +1,186 @@
-<main>
-<!-- Заголовок страницы -->
-<section class="bg-gray-50 py-16">
-<div class="container mx-auto px-4 text-center">
-<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Наши проекты</h1>
-<p class="text-xl text-gray-600 max-w-2xl mx-auto">Реализованные проекты в различных отраслях: от идеи до готового изделия</p>
-</div>
-</section>
-<!-- Фильтры -->
-<div class="flex flex-wrap gap-3 justify-center mb-10" id="portfolio-filters">
-<button class="filter-btn active px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium bg-gray-900 text-white" data-filter="all" onclick="filterProjects('all')">
-    Все проекты
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="medical" onclick="filterProjects('medical')">
-    Медицина
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="electronics" onclick="filterProjects('electronics')">
-    Электроника
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="industrial" onclick="filterProjects('industrial')">
-    Пром. оборудование
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="consumer" onclick="filterProjects('consumer')">
-    Потреб. товары
-  </button>
-</div>
-<script>
-function filterProjects(cat) {
-  document.querySelectorAll('[data-category]').forEach(el => {
-    el.style.display = (cat === 'all' || el.dataset.category === cat) ? 'block' : 'none';
-  });
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.classList.toggle('bg-gray-900', btn.dataset.filter === cat);
-    btn.classList.toggle('text-white', btn.dataset.filter === cat);
-  });
-}
-</script>
-<!-- Фильтры (табы) -->
-<section class="py-8 bg-white border-b">
-<div class="container mx-auto px-4">
-<div class="flex flex-wrap justify-center gap-2">
-<button class="px-4 py-2 rounded-full bg-blue-600 text-white font-medium">Все</button>
-<button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300">Медицина</button>
-<button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300">Электроника</button>
-<button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300">Промышленное оборудование</button>
-<button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300">Товары народного потребления</button>
-<button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300">Транспорт</button>
-</div>
-<!-- Дополнительный фильтр по типу работ (можно добавить позже) -->
-</div>
-</section>
-<!-- Сетка проектов -->
-<section class="py-16 bg-white">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио — Студия промышленного дизайна</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-900">
 
-<div class="flex flex-wrap gap-3 justify-center mb-10" id="portfolio-filters">
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 bg-gray-900 text-white transition text-sm font-medium" data-filter="all" onclick="filterProjects('all')">
-    Все проекты
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="medical" onclick="filterProjects('medical')">
-    Медицина
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="electronics" onclick="filterProjects('electronics')">
-    Электроника
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="industrial" onclick="filterProjects('industrial')">
-    Пром. оборудование
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="consumer" onclick="filterProjects('consumer')">
-    Потреб. товары
-  </button>
-<button class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white transition text-sm font-medium" data-filter="transport" onclick="filterProjects('transport')">
-    Транспорт
-  </button>
-</div>
-<div class="container mx-auto px-4 project-card" data-category="medical">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 project-card" data-category="medical">
-<!-- Проект 1 -->
-<div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition project-card" data-category="medical">
-<div class="h-48 bg-gray-300"></div>
-<div class="p-4 project-card" data-category="medical">
-<h3 class="font-bold text-lg mb-1">Медицинский аппарат</h3>
-<p class="text-sm text-gray-500 mb-2">Медицина / Полный цикл</p>
-<p class="text-gray-600">Разработка дизайна, инжиниринг, прототипирование</p>
-<a class="text-blue-600 mt-2 inline-block" href="project-medical.html">Подробнее →</a>
-</div>
-</div>
-<!-- Проект 2 -->
-<div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition project-card" data-category="industrial">
-<div class="h-48 bg-gray-300"></div>
-<div class="p-4 project-card" data-category="industrial">
-<h3 class="font-bold text-lg mb-1">Промышленный робот-манипулятор</h3>
-<p class="text-sm text-gray-500 mb-2">Промышленное оборудование / Инжиниринг</p>
-<p class="text-gray-600">Кинематические расчёты, оптимизация конструкции</p>
-<a class="text-blue-600 mt-2 inline-block" href="project-robot.html">Подробнее →</a>
-</div>
-</div>
-<!-- Проект 3 -->
-<div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition project-card" data-category="industrial">
-<div class="h-48 bg-gray-300"></div>
-<div class="p-4 project-card" data-category="industrial">
-<h3 class="font-bold text-lg mb-1">Умная колонка</h3>
-<p class="text-sm text-gray-500 mb-2">Электроника / Дизайн + Прототип</p>
-<p class="text-gray-600">Промышленный дизайн, 3D-печать корпуса</p>
-<a class="text-blue-600 mt-2 inline-block" href="project-speaker.html">Подробнее →</a>
-</div>
-</div>
-<!-- Добавьте ещё проекты по аналогии -->
-</div>
-</div>
-</section>
-<!-- Призыв к действию -->
-<section class="py-16 bg-blue-600 text-white">
-<div class="container mx-auto px-4 text-center">
-<h2 class="text-3xl font-bold mb-4">Хотите такой же результат для вашего продукта?</h2>
-<a class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition" href="#">Обсудить проект</a>
-</div>
-</section>
-</main>
+  <!-- Хедер -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-gray-900">ПромДизайн</a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="services.html" class="hover:text-blue-600">Услуги</a>
+        <a href="portfolio.html" class="text-blue-600">Портфолио</a>
+        <a href="production.html" class="hover:text-blue-600">Производство</a>
+        <a href="about.html" class="hover:text-blue-600">О нас</a>
+        <a href="contacts.html" class="hover:text-blue-600">Контакты</a>
+      </nav>
+      <a href="contacts.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Обсудить проект</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок -->
+    <section class="bg-gray-50 py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Наши проекты</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Реализованные проекты в различных отраслях: от идеи до готового изделия</p>
+      </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="py-8 bg-white border-b">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" id="portfolio-filters">
+          <button onclick="filterProjects('all')" data-filter="all"
+            class="filter-btn px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-medium transition">
+            Все проекты
+          </button>
+          <button onclick="filterProjects('medical')" data-filter="medical"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white text-sm font-medium transition">
+            Медицина
+          </button>
+          <button onclick="filterProjects('electronics')" data-filter="electronics"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white text-sm font-medium transition">
+            Электроника
+          </button>
+          <button onclick="filterProjects('industrial')" data-filter="industrial"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white text-sm font-medium transition">
+            Пром. оборудование
+          </button>
+          <button onclick="filterProjects('consumer')" data-filter="consumer"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white text-sm font-medium transition">
+            Потреб. товары
+          </button>
+          <button onclick="filterProjects('transport')" data-filter="transport"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 hover:bg-gray-900 hover:text-white text-sm font-medium transition">
+            Транспорт
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Сетка проектов -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+          <div data-category="medical" class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div class="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center text-4xl">🏥</div>
+            <div class="p-5">
+              <span class="text-xs text-blue-600 font-semibold uppercase tracking-wide">Медицина · Полный цикл</span>
+              <h3 class="font-bold text-lg mt-1 mb-2">Медицинский аппарат</h3>
+              <p class="text-gray-600 text-sm">Разработка дизайна, инжиниринг, прототипирование. Снижение веса на 20%.</p>
+              <a href="project-medical.html" class="text-blue-600 mt-3 inline-block text-sm font-medium hover:underline">Подробнее →</a>
+            </div>
+          </div>
+
+          <div data-category="industrial" class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center text-4xl">🦾</div>
+            <div class="p-5">
+              <span class="text-xs text-orange-600 font-semibold uppercase tracking-wide">Пром. оборудование · Инжиниринг</span>
+              <h3 class="font-bold text-lg mt-1 mb-2">Промышленный робот-манипулятор</h3>
+              <p class="text-gray-600 text-sm">Кинематические расчёты, оптимизация конструкции, снижение металлоёмкости.</p>
+              <a href="project-robot.html" class="text-blue-600 mt-3 inline-block text-sm font-medium hover:underline">Подробнее →</a>
+            </div>
+          </div>
+
+          <div data-category="electronics" class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div class="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center text-4xl">🔊</div>
+            <div class="p-5">
+              <span class="text-xs text-purple-600 font-semibold uppercase tracking-wide">Электроника · Дизайн + Прототип</span>
+              <h3 class="font-bold text-lg mt-1 mb-2">Умная колонка</h3>
+              <p class="text-gray-600 text-sm">Промышленный дизайн, 3D-печать корпуса, подготовка к серийному производству.</p>
+              <a href="project-speaker.html" class="text-blue-600 mt-3 inline-block text-sm font-medium hover:underline">Подробнее →</a>
+            </div>
+          </div>
+
+          <div data-category="consumer" class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-4xl">🛒</div>
+            <div class="p-5">
+              <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">Потреб. товары · Дизайн</span>
+              <h3 class="font-bold text-lg mt-1 mb-2">Бытовой прибор</h3>
+              <p class="text-gray-600 text-sm">Разработка эргономичного дизайна, подготовка КД для производства.</p>
+              <a href="#" class="text-blue-600 mt-3 inline-block text-sm font-medium hover:underline">Подробнее →</a>
+            </div>
+          </div>
+
+          <div data-category="transport" class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div class="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center text-4xl">🚗</div>
+            <div class="p-5">
+              <span class="text-xs text-red-600 font-semibold uppercase tracking-wide">Транспорт · Полный цикл</span>
+              <h3 class="font-bold text-lg mt-1 mb-2">Компонент кузова</h3>
+              <p class="text-gray-600 text-sm">МКЭ-расчёты, оптимизация геометрии, литьё под давлением.</p>
+              <a href="#" class="text-blue-600 mt-3 inline-block text-sm font-medium hover:underline">Подробнее →</a>
+            </div>
+          </div>
+
+          <div data-category="medical" class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div class="h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center text-4xl">💊</div>
+            <div class="p-5">
+              <span class="text-xs text-teal-600 font-semibold uppercase tracking-wide">Медицина · Инжиниринг</span>
+              <h3 class="font-bold text-lg mt-1 mb-2">Хирургический инструмент</h3>
+              <p class="text-gray-600 text-sm">Эргономика, прочностные расчёты, подбор биосовместимых материалов.</p>
+              <a href="#" class="text-blue-600 mt-3 inline-block text-sm font-medium hover:underline">Подробнее →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Хотите такой же результат для вашего продукта?</h2>
+        <p class="text-blue-100 mb-8 text-lg">Обсудим задачу и предложим оптимальное решение</p>
+        <a href="contacts.html" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Обсудить проект</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Футер -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <p class="text-white font-bold text-lg mb-2">ПромДизайн</p>
+        <p class="text-sm">Студия промышленного дизайна и разработки полного цикла</p>
+      </div>
+      <div class="text-sm space-y-1">
+        <p>+7 (123) 456-78-90</p>
+        <p>info@industrialdesign.ru</p>
+        <p>г. Москва, ул. Строителей, д. 1</p>
+      </div>
+      <div class="text-sm">
+        <p class="text-white font-semibold mb-2">Мессенджеры</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white">WhatsApp</a>
+          <a href="#" class="hover:text-white">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs mt-8 text-gray-600">© 2025 Все права защищены · <a href="privacy-policy.html" class="hover:text-gray-400">Политика конфиденциальности</a></div>
+  </footer>
+
+  <script>
+  function filterProjects(cat) {
+    document.querySelectorAll('[data-category]').forEach(el => {
+      el.style.display = (cat === 'all' || el.dataset.category === cat) ? '' : 'none';
+    });
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      const active = btn.dataset.filter === cat;
+      btn.classList.toggle('bg-gray-900', active);
+      btn.classList.toggle('text-white', active);
+      btn.classList.toggle('border-gray-300', !active);
+    });
+  }
+  </script>
+
+</body>
+</html>
