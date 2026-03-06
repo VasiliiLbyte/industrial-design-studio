@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Студия промышленного дизайна и разработки полного цикла</title>
+  <!-- Подключаем скомпилированный CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+  <!-- Хедер (шапка) -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-600">Логотип</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="hover:text-blue-600 transition">Услуги</a>
+        <a href="#" class="hover:text-blue-600 transition">Портфолио</a>
+        <a href="#" class="hover:text-blue-600 transition">Производство</a>
+        <a href="#" class="hover:text-blue-600 transition">О нас</a>
+        <a href="#" class="hover:text-blue-600 transition">Блог</a>
+        <a href="#" class="hover:text-blue-600 transition">Контакты</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <a href="tel:+71234567890" class="text-gray-700">+7 (123) 456-78-90</a>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Обсудить проект</a>
+      </div>
+      <!-- Мобильное меню (упрощённо) -->
+      <button class="md:hidden text-gray-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Первый экран (Hero Section) -->
+    <section class="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+            Разработка промышленного дизайна и инжиниринг полного цикла. От идеи до серии.
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Берём на себя всю ответственность: концепция, конструкторская документация, прототипирование и запуск в производство. Собственное КБ и производственные мощности.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Посмотреть портфолио</a>
+            <a href="#" class="bg-transparent border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition">Рассчитать стоимость проекта</a>
+          </div>
+        </div>
+      </div>
+      <!-- Здесь можно добавить фоновое видео или слайдер, но пока оставим просто градиент -->
+    </section>
+
+    <!-- Блок «Ключевые компетенции» -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Наши компетенции</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <!-- Карточка 1 -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <!-- Иконка (заглушка) -->
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7 7l-5 5"/></svg>
+            </div>
+            <h3 class="font-semibold">Промышленный дизайн</h3>
+            <p class="text-sm text-gray-500">Эргономика, внешний вид</p>
+          </div>
+          <!-- Карточка 2 -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-semibold">Инженерный анализ</h3>
+            <p class="text-sm text-gray-500">МКЭ, прочность</p>
+          </div>
+          <!-- Карточка 3 -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h3 class="font-semibold">Конструкторская документация</h3>
+            <p class="text-sm text-gray-500">Чертежи, спецификации</p>
+          </div>
+          <!-- Карточка 4 -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="font-semibold">Прототипирование</h3>
+            <p class="text-sm text-gray-500">3D-печать, макеты</p>
+          </div>
+          <!-- Карточка 5 -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <h3 class="font-semibold">Подготовка серийного производства</h3>
+            <p class="text-sm text-gray-500">Литьё, штамповка</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок «О нас в цифрах» -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Цифры и факты</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+          <div>
+            <div class="text-4xl font-bold text-blue-600">10+</div>
+            <div class="text-gray-600">лет на рынке</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-blue-600">150+</div>
+            <div class="text-gray-600">реализованных проектов</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-blue-600">50+</div>
+            <div class="text-gray-600">запущено в серию</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-blue-600">500 м²</div>
+            <div class="text-gray-600">площадь производства</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-blue-600">ISO</div>
+            <div class="text-gray-600">сертификаты</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Избранные кейсы (слайдер) — пока просто сетка -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Избранные проекты</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Кейс 1 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="h-48 bg-gray-300"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Медицинское оборудование</h3>
+              <p class="text-gray-600">Снижение веса на 20%, улучшение эргономики</p>
+              <a href="#" class="text-blue-600 mt-2 inline-block">Подробнее →</a>
+            </div>
+          </div>
+          <!-- Кейс 2 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="h-48 bg-gray-300"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Промышленный робот</h3>
+              <p class="text-gray-600">Разработка дизайна и кинематики</p>
+              <a href="#" class="text-blue-600 mt-2 inline-block">Подробнее →</a>
+            </div>
+          </div>
+          <!-- Кейс 3 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="h-48 bg-gray-300"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Потребительская электроника</h3>
+              <p class="text-gray-600">От идеи до серийного образца</p>
+              <a href="#" class="text-blue-600 mt-2 inline-block">Подробнее →</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="#" class="text-blue-600 font-medium">Все проекты →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок «Как мы работаем» -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Как мы работаем</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div class="text-center p-4 bg-white rounded shadow">
+            <span class="text-2xl font-bold text-blue-600">1</span>
+            <h3 class="font-semibold mt-2">Брифинг и ТЗ</h3>
+            <p class="text-sm text-gray-500">2–3 дня</p>
+          </div>
+          <div class="text-center p-4 bg-white rounded shadow">
+            <span class="text-2xl font-bold text-blue-600">2</span>
+            <h3 class="font-semibold mt-2">Концепт-дизайн</h3>
+            <p class="text-sm text-gray-500">от 2 нед.</p>
+          </div>
+          <div class="text-center p-4 bg-white rounded shadow">
+            <span class="text-2xl font-bold text-blue-600">3</span>
+            <h3 class="font-semibold mt-2">Инжиниринг</h3>
+            <p class="text-sm text-gray-500">от 3 нед.</p>
+          </div>
+          <div class="text-center p-4 bg-white rounded shadow">
+            <span class="text-2xl font-bold text-blue-600">4</span>
+            <h3 class="font-semibold mt-2">Прототипирование</h3>
+            <p class="text-sm text-gray-500">от 1 нед.</p>
+          </div>
+          <div class="text-center p-4 bg-white rounded shadow">
+            <span class="text-2xl font-bold text-blue-600">5</span>
+            <h3 class="font-semibold mt-2">Подготовка производства</h3>
+            <p class="text-sm text-gray-500">от 2 нед.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Клиенты и партнёры -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Нам доверяют</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <div class="h-12 w-32 bg-gray-200"></div>
+          <div class="h-12 w-32 bg-gray-200"></div>
+          <div class="h-12 w-32 bg-gray-200"></div>
+          <div class="h-12 w-32 bg-gray-200"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма захвата лидов -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 max-w-2xl text-center">
+        <h2 class="text-3xl font-bold mb-4">Получите предварительный расчёт стоимости и сроков за 24 часа</h2>
+        <form class="mt-8 space-y-4">
+          <input type="text" placeholder="Имя" class="w-full px-4 py-3 rounded-lg text-gray-900" required>
+          <input type="tel" placeholder="Телефон" class="w-full px-4 py-3 rounded-lg text-gray-900" required>
+          <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg text-gray-900" required>
+          <textarea placeholder="Краткое описание проекта" rows="3" class="w-full px-4 py-3 rounded-lg text-gray-900"></textarea>
+          <button type="submit" class="w-full bg-white text-blue-600 font-bold py-3 px-4 rounded-lg hover:bg-gray-100 transition">Отправить заявку</button>
+          <p class="text-sm text-blue-200">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="text-2xl font-bold text-blue-400 mb-4">Логотип</div>
+        <p class="text-gray-400 text-sm">Студия промышленного дизайна и разработки полного цикла</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Контакты</h4>
+        <p class="text-gray-400">+7 (123) 456-78-90</p>
+        <p class="text-gray-400">info@example.com</p>
+        <p class="text-gray-400">г. Москва, ул. Строителей, д.1</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Соцсети и мессенджеры</h4>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white">WhatsApp</a>
+          <a href="#" class="text-gray-400 hover:text-white">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-sm text-gray-400 flex justify-between">
+      <span>© 2025 Все права защищены</span>
+      <a href="#" class="hover:text-white">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <!-- Подключение скрипта -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
